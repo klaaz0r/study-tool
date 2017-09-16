@@ -4,6 +4,7 @@
   "description": "make quizes for study with markdown",
   "main": "dist/index.js",
   "scripts": {
+    "start": "node serve.js",
     "build": "babel src/index.js -o dist/index.js",
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
