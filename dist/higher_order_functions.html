@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="format-detection">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+  <style media="screen">
+    .container-fluid {
+      width: 980px;
+      margin: 0 auto;
+      margin-top: 25px;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <p><img src="http://i.imgur.com/tuFExZl.png" alt="haskell" /></p>
+<h1 id="higherorderfunctions">Higher order functions</h1>
+<p>//todo</p>
+  </div>
+
+</body>
+<script>
+  hljs.initHighlightingOnLoad();
+  
+  function makeButton(id) {
+    var btn = document.createElement('button')
+    var text = document.createTextNode('Show answer')
+    btn.className = 'btn btn-primary'
+    btn.setAttribute('type', 'button')
+    btn.appendChild(text)
+    btn.onclick = function(){
+      document.getElementsByClassName(id)[0].style.display = 'block';
+      return false;
+    }
+    return btn
+  }
+
+  window.onload = function() {
+
+    var answers = document.getElementsByClassName('answer')
+
+    for (var i = 0; i < answers.length; i++) {
+      answers[i].appendChild(makeButton(i))
+      answers[i].children[0].style.display = 'none'
+      answers[i].childNodes[0].className = i
+    }
+
+  }
+
+</script>
+</html>
